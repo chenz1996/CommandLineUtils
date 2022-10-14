@@ -1,9 +1,10 @@
 # About CommandLineUtils
 CommandLineUtils is a library for parsing command line parameters in C# applications. It provides a set of abstractions for parsing commandlines that are testable, easy to configure, and easy to extend.
 
-## Getting Started
+# Getting Started
+## Using CommandLineUtils
 1. Download the CommandLineUtils package.
-2. Building Project with CommandLineUtils
+2. Import CommandLineUtils into your project.
 3. Create a new class with a `Main` method.
 4. Create a new class for command line options, such as `Parameters`.
     ```csharp
@@ -69,8 +70,8 @@ CommandLineUtils is a library for parsing command line parameters in C# applicat
     ```bash
     MyApp 1.2.3.4
     ```
-## Dependency
+# Dependency
 The util **CommandLineUtils** depends on [CommandLineParser](https://www.nuget.org/packages/CommandLineParser/).
 
-## License
+# License
 The util **CommandLineUtils** is licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
