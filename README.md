@@ -20,20 +20,21 @@ CommandLineUtils is a library for parsing command line parameters in C# applicat
     }
    ```
 5. In the `Main` method, use `ParameterUtils<Parameters>.HandledEventArgs(args, RunWithOptions)` to parse the command line arguments and run the program.
-       ```csharp
-       static void Main(string[] args)
-       {
-           ParameterUtils<Parameters>.HandledEventArgs(args, RunWithOptions);
-       }
-   
-       private static void RunWithOptions(Parameters parameters)
-       {
-           Console.WriteLine("Running with options:");
-           Console.WriteLine($"Show logs: {parameters.ShowLogs}");
-           Console.WriteLine($"File name: {parameters.fileName}");
-           Console.WriteLine($"Number: {parameters.number}");
-       }
-       ```
+
+    ```csharp
+    static void Main(string[] args)
+    {
+        ParameterUtils<Parameters>.HandledEventArgs(args, RunWithOptions);
+    }
+
+    private static void RunWithOptions(Parameters parameters)
+    {
+        Console.WriteLine("Running with options:");
+        Console.WriteLine($"Show logs: {parameters.ShowLogs}");
+        Console.WriteLine($"File name: {parameters.fileName}");
+        Console.WriteLine($"Number: {parameters.number}");
+    }
+    ```
 ## Build and run
 1. Build your program and run with command line arguments.
     ```bash
