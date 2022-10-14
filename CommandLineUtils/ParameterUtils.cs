@@ -1,22 +1,24 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Reflection;
 using CommandLine;
 using CommandLine.Text;
 
 namespace CommandLineUtils
 {
+    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
+    // ReSharper disable once ClassNeverInstantiated.Global
     public class InfoOptions
     {
         [Option('h', Default = false, Required = false)]
-        public bool showHelp { get; set; }
+        public bool ShowHelp { get; set; }
         
         [Option('v', Default = false, Required = false)]
-        public bool showVersion { get; set; }
+        public bool ShowVersion { get; set; }
         
-        [Option('a', "author", Default = false, Required = false)]
-        public bool showAuthor { get; set; }
+        [Option("author", Default = false, Required = false)]
+        public bool ShowAuthor { get; set; }
     }
     public static class ParameterUtils<T>
     {
@@ -47,20 +49,20 @@ namespace CommandLineUtils
                 infos =>
                 {
                     quit = true;
-                    if (infos.showHelp)
+                    if (infos.ShowHelp)
                     {
                         Console.WriteLine(helpText);
                         return;
                     }
                     
-                    if (infos.showVersion)
+                    if (infos.ShowVersion)
                     {
                         var assembly = typeof(T).Assembly.GetName();
                         Console.WriteLine($"{assembly.Name} {assembly.Version}");
                         return;
                     }
 
-                    if (infos.showAuthor)
+                    if (infos.ShowAuthor)
                     {
                         Console.WriteLine("Author: Plin Chen");
                         return;
@@ -70,7 +72,7 @@ namespace CommandLineUtils
             parser.Dispose();
             if (quit)
             {
-                System.Environment.Exit(0);
+                Environment.Exit(0);
             }
 
             parserResult.WithParsed(onResult).WithNotParsed(errors=>HandleParseError(errors, parserResult, helpText));
