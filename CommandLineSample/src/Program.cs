@@ -18,7 +18,7 @@ namespace CommandLineSample
 
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ParameterUtils<Parameters>.HandledEventArgs(args, RunWithOptions);
         }
