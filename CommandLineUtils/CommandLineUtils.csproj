@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    </ItemGroup>
+</Project>

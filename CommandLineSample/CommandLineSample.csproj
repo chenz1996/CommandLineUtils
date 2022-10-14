@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Version>2.3.4.5</Version>
+<!--        <AssemblyName>Demo</AssemblyName>-->
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CommandLineUtils\CommandLineUtils.csproj" />
+    </ItemGroup>
+
+</Project>
